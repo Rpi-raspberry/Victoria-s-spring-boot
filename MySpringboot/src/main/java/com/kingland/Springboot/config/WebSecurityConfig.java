@@ -56,6 +56,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity
                 .authorizeRequests()
                 // Some resources of the website need to be authorized
+                .antMatchers("/register.html").permitAll()
+                .antMatchers("/register").permitAll()
                 .antMatchers("/*.html").permitAll()
                 .antMatchers("/").permitAll()
                 // All requests except the above require authentication

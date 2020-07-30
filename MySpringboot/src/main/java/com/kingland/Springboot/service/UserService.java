@@ -60,9 +60,6 @@ public class UserService implements UserDetailsService {
         }
         // add permission
 
-        // log
-        log.info("****** service, role : " + list);
-        // Return the user object with permission information
         return new org.springframework.security.core.userdetails.User(userInfo.getUsername(), userInfo.getPassword(), list);
     }
 }

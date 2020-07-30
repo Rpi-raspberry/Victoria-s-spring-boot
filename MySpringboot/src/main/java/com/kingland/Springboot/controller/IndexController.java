@@ -1,21 +1,24 @@
+
+
 /*
 
  * Copyright 2020 Kingland Systems Corporation. All Rights Reserved.
 
  */
+
 package com.kingland.Springboot.controller;
-
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Controller;
-
+import com.kingland.Springboot.bean.Userinfo;
+import org.springframework.http.ResponseEntity;
+import javax.servlet.http.HttpServletRequest;
 /**
- *
- * @description IndexController:static url
+
  * @author KSC
+
  */
-@Controller
-@Slf4j
-public class IndexController {
+
+public interface IndexController {
+
+
+    public ResponseEntity register(Userinfo userInfo, HttpServletRequest request);
 
 }
-
